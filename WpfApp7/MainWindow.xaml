@@ -40,6 +40,8 @@
             <Button Content="Добавить" Width="120" Margin="0,0,8,0" Click="BtnAdd_Click"/>
             <Button Content="Удалить" Width="120" Margin="0,0,8,0" Click="BtnRemove_Click"/>
             <Button Content="Сортировать по вместимости" Width="220" Margin="0,0,8,0" Click="BtnSort_Click"/>
+            <Button Content="Выход" Width="67" Margin="0,0,8,0" Click="BtnExit_Click"/>
+            <Button Content="О программе" Width="101" Margin="0,0,8,0" Click="BtnAbout_Click"/>
         </StackPanel>
         <ListBox x:Name="lstBuses" Grid.Row="2" FontSize="13"/>
         <GroupBox Header="Сравнение по вместимости" Grid.Row="3" Margin="0,8,0,0" Padding="8">

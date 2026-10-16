@@ -81,5 +81,13 @@ namespace WpfApp7
             else
                 txtResult.Text = $"{first.Brand} ({first.PassengerCapacity} чел.) одинаковы по вместительности {second.Brand} ({second.PassengerCapacity} чел.)";
         }
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void BtnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Практическая работа 7, Вариант 3 Создать интерфейсы - автомобиль, пассажирский транспорт.  Создать класс \r\nавтобус. Класс должен включать конструктор, функцию для формирования строки \r\nинформации об автобусе. Сравнение производить по вместимости пассажиров. ")
+        }
     }
 }
