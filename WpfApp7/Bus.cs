@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 using WpfApp7;
 namespace BusApp
+// Класс Автобус
 {
     public class Bus : IComparable<Bus>
     {
+        //П
         public string Brand {  get; set; }
         public int MaxSpeed {  get; set; }
         public int PassengerCapacity { get; set; }
         public int RouteNumber { get; set; }
-
+        //К
         public Bus (string brand, int maxSpeed, int passengerCapacity, int routeNumber)
         {
             Brand = brand;

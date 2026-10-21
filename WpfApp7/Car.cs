@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace WpfApp7
+// Интерфейс автомобиль
 {
     public interface Car
     {

@@ -19,6 +19,7 @@ namespace WpfApp7
             cmbFirst.ItemsSource = _buses;
             cmbSecond.ItemsSource = _buses;
         }
+        //Кнопка добавить автобус
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtBrand.Text))
@@ -45,6 +46,7 @@ namespace WpfApp7
             _buses.Add(bus);
             txtResult.Text = $"Добавлено: {bus.GetInfo()}";
         }
+        //Убрать автобус
         private void BtnRemove_Click(object sender, RoutedEventArgs e)
         {
             int index = lstBuses.SelectedIndex;
@@ -57,6 +59,7 @@ namespace WpfApp7
             _buses.RemoveAt(index);
             txtResult.Text = $"Удалено: {bus.Brand}";
         }
+        //Сортировка автобуса по кличеству мест
         private void BtnSort_Click(object sender, RoutedEventArgs e)
         {
             var sorted = _buses.OrderBy(b => b).ToList();
@@ -66,6 +69,7 @@ namespace WpfApp7
             txtResult.Text = "Список отсортирован по вместимости пассажиров";
 
         }
+        //Сравнение автобусов
         private void btncompare_Click(object sender, RoutedEventArgs e)
         {
             if (cmbFirst.SelectedItem is not Bus first || cmbSecond.SelectedItem is not Bus second)
@@ -81,13 +85,15 @@ namespace WpfApp7
             else
                 txtResult.Text = $"{first.Brand} ({first.PassengerCapacity} чел.) одинаковы по вместительности {second.Brand} ({second.PassengerCapacity} чел.)";
         }
+        //Выход
         private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+        //О программе
         private void BtnAbout_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Практическая работа 7, Вариант 3 Создать интерфейсы - автомобиль, пассажирский транспорт.  Создать класс \r\nавтобус. Класс должен включать конструктор, функцию для формирования строки \r\nинформации об автобусе. Сравнение производить по вместимости пассажиров. ")
+            MessageBox.Show("Практическая работа 7, Вариант 3 Создать интерфейсы - автомобиль, пассажирский транспорт.  Создать класс \r\nавтобус. Класс должен включать конструктор, функцию для формирования строки \r\nинформации об автобусе. Сравнение производить по вместимости пассажиров. ");
         }
     }
 }
